@@ -13,7 +13,10 @@
 - [x] Fix problem with defaultStringLength
 - [x] Relationships
 - [x] Create Grid
-- [ ] Generate Mines
-- [ ] Reveal cells
+- [x] Generate Mines
+- [x] Reveal cells
+-----
+### Two Hours enlapsed (timeOut)
+----
 - [ ] Calculate mines around
 - [ ] Reval all adjacents empty cells
