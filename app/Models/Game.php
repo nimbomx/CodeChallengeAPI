@@ -20,6 +20,7 @@ class Game extends Model
                 ]);
             }
         }
+        $this->cells()->inRandomOrder()->take($this->mines)->update(['mine' => true]);
     }
     public function getAGrid()
     {

@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Cell;
+use App\Models\Cell;
 use Illuminate\Http\Request;
 
 class CellController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+    public function reveal(Cell $cell)
+    {
+        $cell = $cell->reveal();
+        $game = $cell->game;
+        return $game->getAGrid();
+    }
+
     public function index()
     {
         //

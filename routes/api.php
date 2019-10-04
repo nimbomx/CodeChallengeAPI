@@ -32,6 +32,8 @@ Route::post('/game/create', 'GameController@store');
 Route::post('/game/create-n-load', 'GameController@createNLoad');
 Route::post('/game/load', 'GameController@show');
 
+Route::get('/game/reveal/{cell}', 'CellController@reveal');
+
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

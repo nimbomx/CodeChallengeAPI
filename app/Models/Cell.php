@@ -8,6 +8,13 @@ class Cell extends Model
 {
     protected $guarded = [];
 
+    public function reveal()
+    {
+        $this->revealed = true;
+        $this->save();
+
+        return $this;
+    }
     public function game()
     {
         return $this->belongsTo(Game::class);
