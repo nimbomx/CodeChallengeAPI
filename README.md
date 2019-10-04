@@ -11,5 +11,9 @@
 - [x] Game table
 - [x] Cell table
 - [x] Fix problem with defaultStringLength
-- [ ] Relationships
-- [ ] Create Grid
+- [x] Relationships
+- [x] Create Grid
+- [ ] Generate Mines
+- [ ] Reveal cells
+- [ ] Calculate mines around
+- [ ] Reval all adjacents empty cells

@@ -31,6 +31,14 @@ class GameController extends Controller
     {
         return Game::create($request->all());
     }
+    public function createNLoad(Request $request)
+    {
+        $data['game'] = $game = $this->store($request);
+        $game->generateGrid();
+        $data['grid'] = $game->getAGrid();
+
+        return $data;
+    }
 
     /**
      * Display the specified resource.
@@ -40,7 +48,10 @@ class GameController extends Controller
      */
     public function show(Game $game)
     {
-        return $game;
+        $data['game'] = $game;
+        $data['grid'] = $game->getAGrid();
+
+        return $data;
     }
 
     /**
