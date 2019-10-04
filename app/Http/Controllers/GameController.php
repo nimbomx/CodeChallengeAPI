@@ -14,18 +14,12 @@ class GameController extends Controller
      */
     public function index()
     {
-        //
+        return Game::all();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
-    {
-        //
-    }
+    { }
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +29,7 @@ class GameController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Game::create($request->all());
     }
 
     /**
@@ -46,7 +40,7 @@ class GameController extends Controller
      */
     public function show(Game $game)
     {
-        //
+        return $game;
     }
 
     /**

@@ -25,6 +25,14 @@ Route::put('/test', function (Request $request) {
 Route::delete('/test', function (Request $request) {
     return ['mesage' => 'deleteOk'];
 });
+
+Route::get('/games', 'GameController@index');
+Route::get('/game/{game}', 'GameController@show');
+Route::post('/game/create', 'GameController@store');
+Route::post('/game/create-n-load', 'GameController@createNLoad');
+Route::post('/game/load', 'GameController@show');
+
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
