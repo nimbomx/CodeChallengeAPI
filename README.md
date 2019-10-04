@@ -8,7 +8,8 @@
 - [x] Test RESTful comunication
 - [x] Avoid CORS Policy Error with barryvdh/laravel-cors pkg
 -----
-- [ ] Game table
-- [ ] Cell table
+- [x] Game table
+- [x] Cell table
+- [x] Fix problem with defaultStringLength
 - [ ] Relationships
 - [ ] Create Grid
