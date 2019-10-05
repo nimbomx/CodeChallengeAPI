@@ -27,9 +27,9 @@
 - [x] Detect if all non mine cells are revelaed
 - [x] Persist endgame timestamp
 - [x] Calculate time elapsed
-- [ ] Pause and resume Game
-- [ ] update times an recalculate elapsed time
-- [ ] hide/delete grid on pause
+- [x] Pause and resume Game
+- [x] update times an recalculate elapsed time
+- [x] hide/delete grid on pause
 - [ ] update doc view
 - [ ] form to personalize rows, cols and mines
 - [ ] Install Passport pkg

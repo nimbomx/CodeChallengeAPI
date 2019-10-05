@@ -12,6 +12,11 @@ class GameController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function close(Game $game)
+    {
+        $game->close();
+        return [];
+    }
     public function index()
     {
         return Game::all();

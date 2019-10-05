@@ -22,6 +22,11 @@ class Game extends Model
             return false;
         }
     }
+    public function close()
+    {
+        $this->setStopTime();
+        $this->save();
+    }
     public function winner()
     {
         $this->setStopTime();
@@ -47,7 +52,8 @@ class Game extends Model
     {
         $start = Carbon::parse($this->start);
         $stop = Carbon::parse($this->stop);
-        $this->time = $stop->diffInSeconds($start);
+        $seconds = $this->time;
+        $this->time = $seconds + $stop->diffInSeconds($start);
         //$this->time = date_diff(date_create($this->start), date_create($this->stop));
         $this->save();
     }
