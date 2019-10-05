@@ -17,6 +17,14 @@ class CellController extends Controller
         $data['status'] = $cell->mine ? 'boom' : 'ok';
         return $data;
     }
+    public function flag(Cell $cell)
+    {
+        if (!$cell->mark) $cell->mark = 'flag';
+        elseif ($cell->mark == 'flag') $cell->mark = 'question';
+        else $cell->mark = null;
+        $cell->save();
+        return $cell;
+    }
 
     public function index()
     {

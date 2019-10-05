@@ -20,7 +20,7 @@
 ----
 - [x] Calculate mines around
 - [x] Reval all adjacents empty cells
-- [ ] Add Flag or Question
+- [x] Add Flag or Question
 - [ ] End geme on mine press
 - [ ] Reveal All
 - [ ] TDD functions
