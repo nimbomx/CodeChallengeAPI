@@ -30,14 +30,14 @@
 - [x] Pause and resume Game
 - [x] update times an recalculate elapsed time
 - [x] hide/delete grid on pause
-- [ ] update doc view
-- [ ] form to personalize rows, cols and mines
+- [x] update doc view
+- [x] form to personalize rows, cols and mines
 - [ ] Install Passport pkg
 - [ ] Sign In form
 - [ ] Log In form
 - [ ] Log Out form
 - [ ] show only games for logged players
-- [ ] update doc view
+- [x] update doc view
 
 ---
 - [ ] TDD functions

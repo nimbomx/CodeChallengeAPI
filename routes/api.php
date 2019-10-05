@@ -30,7 +30,7 @@ Route::get('/games', 'GameController@index');
 Route::get('/game/{game}', 'GameController@show');
 Route::post('/game/create', 'GameController@store');
 Route::post('/game/create-n-load', 'GameController@createNLoad');
-Route::post('/game/load', 'GameController@show');
+//Route::post('/game/load', 'GameController@show');
 Route::get('/game/close/{game}', 'GameController@close');
 
 Route::get('/game/reveal/{cell}', 'CellController@reveal');
