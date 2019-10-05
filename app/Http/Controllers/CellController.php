@@ -20,6 +20,7 @@ class CellController extends Controller
             $data['status'] = $cell->mine ? 'boom' : 'ok';
 
         $data['iwin'] = $iwin;
+        $data['seconds'] = $game->time;
         return $data;
     }
     public function flag(Cell $cell)

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Game extends Model
 {
@@ -23,15 +24,15 @@ class Game extends Model
     }
     public function winner()
     {
+        $this->setStopTime();
         $this->endgame = date('Y-m-d H:i:s');
-        $this->stop = date('Y-m-d H:i:s');
         $this->result = 'win';
         $this->save();
     }
     public function gameOver()
     {
+        $this->setStopTime();
         $this->endgame = date('Y-m-d H:i:s');
-        $this->stop = date('Y-m-d H:i:s');
         $this->result = 'loose';
         $this->save();
     }
@@ -42,11 +43,20 @@ class Game extends Model
             $this->save();
         }
     }
+    public function calculateTime()
+    {
+        $start = Carbon::parse($this->start);
+        $stop = Carbon::parse($this->stop);
+        $this->time = $stop->diffInSeconds($start);
+        //$this->time = date_diff(date_create($this->start), date_create($this->stop));
+        $this->save();
+    }
     public function setStopTime()
     {
         if (!$this->endgame) {
             $this->stop = date('Y-m-d H:i:s');
             $this->save();
+            $this->calculateTime();
         }
     }
     public function generateGrid()
