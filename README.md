@@ -22,10 +22,10 @@
 - [x] Reval all adjacents empty cells
 - [x] Add Flag or Question
 - [x] End game on mine press
-- [ ] Save game result
-- [ ] Persist startgame timestamp
-- [ ] Detect if all non mine cells are revelaed
-- [ ] Persist endgame timestamp
+- [x] Save game result
+- [x] Persist startgame timestamp
+- [x] Detect if all non mine cells are revelaed
+- [x] Persist endgame timestamp
 - [ ] Calculate time elapsed
 - [ ] Pause and resume Game
 - [ ] update times an recalculate elapsed time

@@ -36,7 +36,7 @@ class GameController extends Controller
         $data['game'] = $game = $this->store($request);
         $game->generateGrid();
         $data['grid'] = $game->getAGrid();
-
+        $game->setStartTime();
         return $data;
     }
 
@@ -50,7 +50,7 @@ class GameController extends Controller
     {
         $data['game'] = $game;
         $data['grid'] = $game->getAGrid();
-
+        $game->setStartTime();
         return $data;
     }
 

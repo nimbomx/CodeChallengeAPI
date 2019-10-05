@@ -8,11 +8,46 @@ class Game extends Model
 {
     protected $guarded = [];
 
+    public function checkIfWin()
+    {
+        $cells = $this->cells()->count();
+        $mines = $this->mines;
+        $revealed = $this->cells()->where('revealed', true)->count();
+        $safeCells = $cells - $mines;
+        if ($revealed == $safeCells) {
+            $this->winner();
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function winner()
+    {
+        $this->endgame = date('Y-m-d H:i:s');
+        $this->stop = date('Y-m-d H:i:s');
+        $this->result = 'win';
+        $this->save();
+    }
     public function gameOver()
     {
         $this->endgame = date('Y-m-d H:i:s');
+        $this->stop = date('Y-m-d H:i:s');
         $this->result = 'loose';
         $this->save();
+    }
+    public function setStartTime()
+    {
+        if (!$this->endgame) {
+            $this->start = date('Y-m-d H:i:s');
+            $this->save();
+        }
+    }
+    public function setStopTime()
+    {
+        if (!$this->endgame) {
+            $this->stop = date('Y-m-d H:i:s');
+            $this->save();
+        }
     }
     public function generateGrid()
     {

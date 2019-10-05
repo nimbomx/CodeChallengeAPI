@@ -12,8 +12,14 @@ class CellController extends Controller
     {
         $cell = $cell->reveal();
         $game = $cell->game;
+        $iwin = $game->checkIfWin();
         $data['grid'] = $game->getAGrid();
-        $data['status'] = $cell->mine ? 'boom' : 'ok';
+        if ($iwin)
+            $data['status'] = 'win';
+        else
+            $data['status'] = $cell->mine ? 'boom' : 'ok';
+
+        $data['iwin'] = $iwin;
         return $data;
     }
     public function flag(Cell $cell)
