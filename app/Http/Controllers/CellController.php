@@ -10,9 +10,12 @@ class CellController extends Controller
 
     public function reveal(Cell $cell)
     {
+
         $cell = $cell->reveal();
         $game = $cell->game;
-        return $game->getAGrid();
+        $data['grid'] = $game->getAGrid();
+        $data['status'] = $cell->mine ? 'boom' : 'ok';
+        return $data;
     }
 
     public function index()

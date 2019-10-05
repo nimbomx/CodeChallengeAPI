@@ -8,8 +8,6 @@ class Game extends Model
 {
     protected $guarded = [];
 
-
-
     public function generateGrid()
     {
         foreach (range(0, $this->rows - 1) as $row) {
@@ -22,18 +20,22 @@ class Game extends Model
         }
         $this->cells()->inRandomOrder()->take($this->mines)->update(['mine' => true]);
     }
+
     public function getAGrid()
     {
         $grid = [];
         foreach ($this->rows() as $row) {
-            $grid[$row] = $this->cells()->where('x', $row)->get();
+            $grid[$row] = [];
+            foreach ($this->cells()->latest('y')->where('x', $row)->get() as $col) {
+                $grid[$row][$col->y] = $col;
+            }
         }
         return $grid;
     }
 
     public function rows()
     {
-        return $this->cells()->select('x')->groupBy('x')->pluck('x');
+        return $this->cells()->select('x')->latest('x')->groupBy('x')->pluck('x');
     }
 
     public function cells()

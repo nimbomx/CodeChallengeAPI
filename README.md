@@ -16,7 +16,28 @@
 - [x] Generate Mines
 - [x] Reveal cells
 -----
-### Two Hours enlapsed (timeOut)
+### Two Hours elapsed (timeOut)
 ----
-- [ ] Calculate mines around
+- [x] Calculate mines around
 - [ ] Reval all adjacents empty cells
+- [ ] Add Flag or Question
+- [ ] End geme on mine press
+- [ ] Reveal All
+- [ ] TDD functions
+- [ ] TDD units
+- [ ] Save game result
+- [ ] Persist startgame timestamp
+- [ ] Detect if all non mine cells are revelaed
+- [ ] Persist endgame timestamp
+- [ ] Calculate time elapsed
+- [ ] Pause and resume Game
+- [ ] update times an recalculate elapsed time
+- [ ] hide/delete grid on pause
+- [ ] update doc view
+- [ ] form to personalize rows, cols and mines
+- [ ] Install Passport pkg
+- [ ] Sign In form
+- [ ] Log In form
+- [ ] Log Out form
+- [ ] show only games for logged players
+- [ ] update doc view
