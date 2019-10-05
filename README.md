@@ -19,7 +19,7 @@
 ### Two Hours elapsed (timeOut)
 ----
 - [x] Calculate mines around
-- [ ] Reval all adjacents empty cells
+- [x] Reval all adjacents empty cells
 - [ ] Add Flag or Question
 - [ ] End geme on mine press
 - [ ] Reveal All
