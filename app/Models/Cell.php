@@ -16,6 +16,11 @@ class Cell extends Model
     {
         $this->revealed = true;
         $this->save();
+        if ($this->mine) {
+            $this->game->gameOver();
+            //reveal all()
+            return $this;
+        }
         if ($this->findNeighbors() === 0) {
             $this->floodFill($this->x, $this->y);
         };

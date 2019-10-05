@@ -8,6 +8,12 @@ class Game extends Model
 {
     protected $guarded = [];
 
+    public function gameOver()
+    {
+        $this->endgame = date('Y-m-d H:i:s');
+        $this->result = 'loose';
+        $this->save();
+    }
     public function generateGrid()
     {
         foreach (range(0, $this->rows - 1) as $row) {

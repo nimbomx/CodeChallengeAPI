@@ -21,10 +21,7 @@
 - [x] Calculate mines around
 - [x] Reval all adjacents empty cells
 - [x] Add Flag or Question
-- [ ] End geme on mine press
-- [ ] Reveal All
-- [ ] TDD functions
-- [ ] TDD units
+- [x] End game on mine press
 - [ ] Save game result
 - [ ] Persist startgame timestamp
 - [ ] Detect if all non mine cells are revelaed
@@ -41,3 +38,8 @@
 - [ ] Log Out form
 - [ ] show only games for logged players
 - [ ] update doc view
+
+---
+- [ ] TDD functions
+- [ ] TDD units
+- [ ] Reveal All
