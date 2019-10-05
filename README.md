@@ -32,14 +32,16 @@
 - [x] hide/delete grid on pause
 - [x] update doc view
 - [x] form to personalize rows, cols and mines
+- [x] update doc view
+- [ ] TDD functions
+- [ ] TDD units
+---
+### No time to multiusers
 - [ ] Install Passport pkg
 - [ ] Sign In form
 - [ ] Log In form
 - [ ] Log Out form
 - [ ] show only games for logged players
-- [x] update doc view
 
 ---
-- [ ] TDD functions
-- [ ] TDD units
 - [ ] Reveal All
